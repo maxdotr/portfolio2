@@ -1,0 +1,19 @@
+.header {
+  color: white;
+  font-size: 4vw;
+}
+
+.cardBody {
+  min-width: 40vw !important;
+  margin: auto;
+}
+.cardBodyText {
+  font-size: 2vw;
+}
+.cardTitleText {
+  font-size: 3vw;
+}
+
+.cardButton {
+  font-size: 2vw;
+}
