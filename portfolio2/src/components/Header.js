@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Header.module.css';
 import me from '../imgs/me.JPG';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 const Header = () => {
