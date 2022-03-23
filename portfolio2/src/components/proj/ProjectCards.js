@@ -99,20 +99,22 @@ const cards = [
 const ProjectCards = () => {
   return (
     <Container>
-      <Row>
+      <Row className='mx-auto'>
         {cards.map((card) => (
-          <Card className={classes.projCard}>
-            <Card.Img
-              variant='top'
-              src={card.src}
-              className={classes.projImg}
-            />
-            <Card.Body>
-              <Card.Title>{card.title}</Card.Title>
-              <Card.Text>{card.description}</Card.Text>
-              <Button variant='primary'></Button>
-            </Card.Body>
-          </Card>
+          <div className='col-lg-4 col-12'>
+            <Card className={classes.projCard}>
+              <Card.Img
+                variant='top'
+                src={card.src}
+                className={classes.projImg}
+              />
+              <Card.Body>
+                <Card.Title>{card.title}</Card.Title>
+                <Card.Text>{card.description}</Card.Text>
+                <Button variant='primary'></Button>
+              </Card.Body>
+            </Card>
+          </div>
         ))}
       </Row>
     </Container>
