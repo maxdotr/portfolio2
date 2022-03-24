@@ -6,3 +6,20 @@
   width: 10vw;
   margin: auto !important;
 }
+
+.item {
+  text-decoration: none;
+  margin-right: 5%;
+  text-align: center;
+}
+
+.navContainer {
+  transition: 0.3s;
+  border-radius: 7%;
+}
+
+.navContainer:hover {
+  transition: 0.3s;
+  border-radius: 7%;
+  background-color: black;
+}

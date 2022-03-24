@@ -15,20 +15,24 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className={classes.item}>
-            <Link
-              to='/projects'
-              style={{ color: '#B6B6B8' }}
-              className={classes.item}
-            >
-              Projects
-            </Link>
-            <Link
-              to='/contact'
-              style={{ color: '#B6B6B8' }}
-              className={classes.item}
-            >
-              Contact me!
-            </Link>
+            <div className={classes.navContainer}>
+              <Link
+                to='/projects'
+                style={{ color: '#B6B6B8' }}
+                className={classes.item}
+              >
+                Projects
+              </Link>
+            </div>
+            <div className={classes.navContainer}>
+              <Link
+                to='/contact'
+                style={{ color: '#B6B6B8' }}
+                className={classes.item}
+              >
+                Contact me!
+              </Link>
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>
