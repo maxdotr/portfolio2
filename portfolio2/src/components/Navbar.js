@@ -22,7 +22,11 @@ const NavBar = () => {
             >
               Projects
             </Link>
-            <Link to='/' style={{ color: '#B6B6B8' }} className={classes.item}>
+            <Link
+              to='/home'
+              style={{ color: '#B6B6B8' }}
+              className={classes.item}
+            >
               Contact me!
             </Link>
           </Nav>

@@ -1,3 +1,16 @@
 .projCard {
   margin: 5%;
 }
+
+.projImg:hover {
+  transition: 0.3s;
+  opacity: 65%;
+}
+
+.projImg {
+  transition: 0.3s;
+}
+
+.hide {
+  display: none;
+}
