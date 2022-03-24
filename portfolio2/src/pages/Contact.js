@@ -7,3 +7,5 @@ import React from 'react';
 const Contact = () => {
   return <NavBar />;
 };
+
+export default Contact;
