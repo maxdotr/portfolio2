@@ -98,9 +98,31 @@ const cards = [
 ];
 
 const ProjectCards = (props) => {
+  let srcVar = '';
+
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const showModal = (props) => {
+    srcVar = props;
+    setIsOpen(true);
+  };
+
+  const hideModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <React.Fragment>
       <Container>
+        <Modal show={isOpen} onHide={hideModal}>
+          <Modal.Body>
+            <img src={srcVar} />
+          </Modal.Body>
+          <Modal.Footer>
+            <button onClick={hideModal}>Cancel</button>
+            <button>Save</button>
+          </Modal.Footer>
+        </Modal>
         <Row className='mx-auto'>
           {cards.map((card) => (
             <div className='col-lg-4 col-12'>
@@ -113,7 +135,17 @@ const ProjectCards = (props) => {
                 <Card.Body>
                   <Card.Title>{card.title}</Card.Title>
                   <Card.Text>{card.description}</Card.Text>
-                  <Button variant='primary'>Expand</Button>
+                  <Button
+                    variant='primary'
+                    onClick={() => {
+                      srcVar = card.src;
+                      srcVar = JSON.stringify(srcVar);
+                      console.log(srcVar);
+                      showModal(srcVar);
+                    }}
+                  >
+                    Expand
+                  </Button>
                 </Card.Body>
               </Card>
             </div>
