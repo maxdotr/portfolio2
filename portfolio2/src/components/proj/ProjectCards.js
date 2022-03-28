@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Modal, Card, Button } from 'react-bootstrap';
 import classes from './ProjectCards.module.css';
+import { Outlet, Link } from 'react-router-dom';
 import cardImg1 from '../../imgs/card1.png';
 import cardImg2 from '../../imgs/card2.png';
 import cardImg3 from '../../imgs/card3.png';
@@ -11,7 +12,6 @@ import cardImg6 from '../../imgs/card6.png';
 import cardImg7 from '../../imgs/card7.png';
 import cardImg8 from '../../imgs/card8.png';
 import cardImg9 from '../../imgs/card9.png';
-import ProjModal from './ProjModal';
 
 const cardImage1 = cardImg1;
 const cardImage2 = cardImg2;
@@ -113,13 +113,16 @@ const ProjectCards = (props) => {
                 <Card.Body>
                   <Card.Title>{card.title}</Card.Title>
                   <Card.Text>{card.description}</Card.Text>
-                  <Button variant='primary'>Expand</Button>
+                  <Link to={`/projects/${card.key}`}>
+                    <Button variant='primary'>Expand</Button>
+                  </Link>
                 </Card.Body>
               </Card>
             </div>
           ))}
         </Row>
       </Container>
+      <Outlet />
     </React.Fragment>
   );
 };
