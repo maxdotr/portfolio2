@@ -1,7 +1,8 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Modal, Card, Button } from 'react-bootstrap';
-import classes from './ProjectCards.module.css';
+import classes from './ProjectDetails.module.css';
 import { Outlet, Link } from 'react-router-dom';
 import cardImg1 from '../../imgs/card1.png';
 import cardImg2 from '../../imgs/card2.png';
@@ -12,6 +13,7 @@ import cardImg6 from '../../imgs/card6.png';
 import cardImg7 from '../../imgs/card7.png';
 import cardImg8 from '../../imgs/card8.png';
 import cardImg9 from '../../imgs/card9.png';
+import { Tooltip } from 'bootstrap';
 
 const cardImage1 = cardImg1;
 const cardImage2 = cardImg2;
@@ -97,36 +99,36 @@ const cards = [
   },
 ];
 
-const ProjectCards = (props) => {
-  return (
-    <React.Fragment>
-      <Container>
-        <Row className='mx-auto'>
-          {cards.map((card) => (
-            <div className='col-lg-4 col-12'>
-              <Card className={classes.projCard} key={card.key}>
-                <Link to={`/projects/${card.key}`}>
-                  <Card.Img
-                    variant='top'
-                    src={card.src}
-                    className={classes.projImg}
-                  />
-                </Link>
-                <Card.Body>
-                  <Card.Title>{card.title}</Card.Title>
-                  <Card.Text>{card.description}</Card.Text>
-                  <Link to={`/projects/${card.key}`}>
-                    <Button variant='primary'>Expand</Button>
-                  </Link>
-                </Card.Body>
-              </Card>
-            </div>
-          ))}
-        </Row>
-      </Container>
-      <Outlet />
-    </React.Fragment>
-  );
+const ProjectDetails = () => {
+  let projectID = useParams().projectID;
+  console.log(projectID);
+  console.log(cards[1].key);
+  for (let i = 0; i < 9; i++) {
+    if (projectID == cards[i].key) {
+      return (
+        <Container className={classes.projectContainer}>
+          <Row>
+            <Col>
+              <h1>{cards[i].title}</h1>
+            </Col>
+          </Row>
+          <Row className='justify-content-md-center'>
+            <Col>
+              <img
+                src={cards[i].src}
+                className={`d-block mx-auto img-fluid ${classes.detailsImg}`}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <h3>{cards[i].description}</h3>
+            </Col>
+          </Row>
+        </Container>
+      );
+    }
+  }
 };
 
-export default ProjectCards;
+export default ProjectDetails;

@@ -1,0 +1,19 @@
+.projectContainer {
+  margin: auto !important;
+  color: white;
+}
+
+.detailsImg {
+  transition: 0.3s;
+  margin: auto !important;
+  justify-content: center !important;
+  width: 60vw;
+  border-radius: 3%;
+  border-width: thin !important;
+  border-color: white !important;
+}
+
+.detailsImg:hover {
+  transition: 0.3s;
+  width: 70vw;
+}
