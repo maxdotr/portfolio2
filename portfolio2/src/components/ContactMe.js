@@ -5,6 +5,16 @@ import { Container, Row, Col, Modal, Card, Button } from 'react-bootstrap';
 import classes from './ContactMe.module.css';
 import { Outlet, Link } from 'react-router-dom';
 
+function copyPhone() {
+  navigator.clipboard.writeText('9162804533');
+  alert('Copied!');
+}
+
+function copyEmail() {
+  navigator.clipboard.writeText('maxdotrodgers@gmail.com');
+  alert('Copied!');
+}
+
 const ContactMe = () => {
   return (
     <Container className={`p-5 ${classes.contactContainer}`}>
@@ -25,13 +35,20 @@ const ContactMe = () => {
                   Call/Text
                 </h5>
                 <b className='mx-auto'>
-                  <p className={`card-text ${classes.cardText} mx-auto`}>
+                  <p
+                    id='phoneNumber'
+                    className={`card-text ${classes.cardText} mx-auto`}
+                  >
                     1 (916) 280-4533
                   </p>
                 </b>
                 <br />
                 <br />
-                <Button variant='outline-dark' className='btn-outline-dark m-5'>
+                <Button
+                  variant='outline-dark'
+                  className='btn-outline-dark m-5'
+                  onClick={() => copyPhone()}
+                >
                   Copy to clipboard!
                 </Button>
               </Card>
@@ -44,13 +61,17 @@ const ContactMe = () => {
                   Email me!
                 </h5>
                 <b className='mx-auto'>
-                  <p className={`card-text ${classes.cardText} mx-auto m-1`}>
+                  <p className={`card-text ${classes.cardText} mx-auto`}>
                     maxdotrodgers@gmail.com
                   </p>
                 </b>
                 <br />
                 <br />
-                <Button variant='outline-dark' className='btn-outline-dark m-5'>
+                <Button
+                  variant='outline-dark'
+                  className='btn-outline-dark m-5'
+                  onClick={() => copyEmail()}
+                >
                   Copy to clipboard!
                 </Button>
               </Card>
