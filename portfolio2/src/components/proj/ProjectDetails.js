@@ -122,7 +122,7 @@ const ProjectDetails = () => {
           </Row>
           <Row>
             <Col>
-              <h3>{cards[i].description}</h3>
+              <h3 className='pb-5'>{cards[i].description}</h3>
             </Col>
           </Row>
         </Container>
