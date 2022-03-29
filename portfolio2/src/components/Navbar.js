@@ -2,6 +2,7 @@ import react from 'react';
 import computerIcon from '../imgs/tic-computer.svg';
 import classes from './Navbar.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from '../imgs/logo.png';
 import { Navbar, Nav, Image, Container } from 'react-bootstrap';
 import { Outlet, Link } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ const NavBar = () => {
     <Navbar bg='dark' expand='lg'>
       <Container>
         <Link to='/' style={{ color: '#B6B6B8' }}>
-          Max Rodgers
+          <img src={logo} className={classes.headerLogo} />
         </Link>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
