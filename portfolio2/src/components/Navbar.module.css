@@ -27,5 +27,12 @@
 }
 
 .headerLogo {
+  transition: 0.3s;
   width: 60px;
+}
+
+.headerLogo:hover {
+  transition: 0.3s;
+  width: 70px;
+  opacity: 60%;
 }

@@ -11,7 +11,11 @@ const NavBar = () => {
     <Navbar bg='dark' expand='lg'>
       <Container>
         <Link to='/' style={{ color: '#B6B6B8' }}>
-          <img src={logo} className={classes.headerLogo} />
+          <img
+            src={logo}
+            className={classes.headerLogo}
+            alt='Logo provided by Logomakr.com'
+          />
         </Link>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
