@@ -1,3 +1,12 @@
 .contactContainer {
   color: white;
 }
+
+.cardTitle {
+  color: black !important;
+}
+
+.cardText {
+  color: black !important;
+  font-size: 20px;
+}
