@@ -16,20 +16,26 @@ const Header = () => {
           </h1>
         </Col>
         <Col className='col-lg-6 col-12'>
-          <Card className={classes.cardBody}>
+          <Card className={`border-dark ${classes.cardBody}`}>
             <Card.Img variant='top' src={me} className={classes.cardImg} />
             <Card.Body>
               <Card.Title className={classes.cardTitleText}></Card.Title>
               <Card.Text className={classes.cardBodyText}>
                 Experienced in a multitude of langugages, frameworks, and API's.
               </Card.Text>
-              <Button variant='primary' className={classes.cardButton}>
-                See what I can do {'>>'}
-              </Button>
+              <Link to='/projects'>
+                <Button
+                  variant='primary'
+                  className={`btn-success ${classes.cardButton}`}
+                >
+                  See what I can do {'>>'}
+                </Button>
+              </Link>
             </Card.Body>
           </Card>
         </Col>
       </Row>
+      <Outlet />
     </Container>
   );
 };
