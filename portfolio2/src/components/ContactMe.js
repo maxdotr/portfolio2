@@ -55,8 +55,8 @@ const ContactMe = () => {
             </Container>
           </Col>
           <Col className={`col-lg-6 col-12 mx-auto`}>
-            <Container className={`m-5 p-2`}>
-              <Card>
+            <Container className={`m-5 p-2 ${classes.cardHolder}`}>
+              <Card className={classes.cardHolder}>
                 <h5 className={`card-title ${classes.cardTitle} m-1`}>
                   Email me!
                 </h5>
