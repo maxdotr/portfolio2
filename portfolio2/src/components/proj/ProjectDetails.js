@@ -102,8 +102,6 @@ const cards = [
 
 const ProjectDetails = () => {
   let projectID = useParams().projectID;
-  console.log(projectID);
-  console.log(cards[1].key);
   for (let i = 0; i < 9; i++) {
     if (projectID == cards[i].key) {
       return (

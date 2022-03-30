@@ -99,33 +99,31 @@ const cards = [
 
 const ProjectCards = (props) => {
   return (
-    <React.Fragment>
-      <Container>
-        <Row className='mx-auto'>
-          {cards.map((card) => (
-            <div className='col-lg-4 col-12'>
-              <Card className={classes.projCard} key={card.key}>
+    <Container>
+      <Row className='mx-auto'>
+        {cards.map((card) => (
+          <div className='col-lg-4 col-12' key={card.key}>
+            <Card className={classes.projCard} key={card.key}>
+              <Link to={`/projects/${card.key}`}>
+                <Card.Img
+                  variant='top'
+                  src={card.src}
+                  className={classes.projImg}
+                />
+              </Link>
+              <Card.Body>
+                <Card.Title>{card.title}</Card.Title>
+                <Card.Text>{card.description}</Card.Text>
                 <Link to={`/projects/${card.key}`}>
-                  <Card.Img
-                    variant='top'
-                    src={card.src}
-                    className={classes.projImg}
-                  />
+                  <Button variant='primary'>Expand</Button>
                 </Link>
-                <Card.Body>
-                  <Card.Title>{card.title}</Card.Title>
-                  <Card.Text>{card.description}</Card.Text>
-                  <Link to={`/projects/${card.key}`}>
-                    <Button variant='primary'>Expand</Button>
-                  </Link>
-                </Card.Body>
-              </Card>
-            </div>
-          ))}
-        </Row>
-      </Container>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
+      </Row>
       <Outlet />
-    </React.Fragment>
+    </Container>
   );
 };
 
