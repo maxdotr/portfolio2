@@ -30,7 +30,8 @@ const cards = [
     key: 1,
     src: cardImage1,
     title: 'React Meetups',
-    description: 'Creating a pseudo social media using React and MongoDB.',
+    description:
+      "Creating a pseudo social media using React and MongoDB. Uses ExpressJS for the backend. It also includes Google's Maps API package for geolocation. Via Google's OAuth API so that users can easily be added and securely authenticated.",
     class: 'projImg',
   },
   {
@@ -38,7 +39,7 @@ const cards = [
     src: cardImage2,
     title: 'User Meetups',
     description:
-      'A site where users can securely create custom user profiles and post things to their page. Using React, mongodb, React-Auth and more.',
+      'A site where users can securely create custom user profiles and post things to their page. Using React, mongodb, React-Auth and more. The backend is written with ExpressJS.',
     class: 'projImg',
   },
   {
@@ -46,7 +47,7 @@ const cards = [
     src: cardImage3,
     title: 'Eccomerce Demo',
     description:
-      'A site where users can purchase items that admins can easily add to the site. Uses React, MongoDB, Redux and more.',
+      'A site where users can purchase items that admins can easily add to the site. Uses React, MongoDB, Redux and more. The backend uses MongoDB and ExpressJS.',
     class: 'projImg',
   },
   {
@@ -54,7 +55,7 @@ const cards = [
     src: cardImage4,
     title: 'React Auth',
     description:
-      'A site demo-ing secure login through React-Redux and MongoDB.',
+      "A site demo-ing secure login through React-Redux and MongoDB. Uses Google's OAuth API.",
     class: 'projImg',
   },
   {
