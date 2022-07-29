@@ -13,6 +13,7 @@ import cardImg6 from '../../imgs/card6.png';
 import cardImg7 from '../../imgs/card7.png';
 import cardImg8 from '../../imgs/card8.png';
 import cardImg9 from '../../imgs/card9.png';
+import cardImg10 from '../../imgs/card10.png';
 import { Tooltip } from 'bootstrap';
 
 const cardImage1 = cardImg1;
@@ -24,10 +25,19 @@ const cardImage6 = cardImg6;
 const cardImage7 = cardImg7;
 const cardImage8 = cardImg8;
 const cardImage9 = cardImg9;
+const cardImage10 = cardImg10;
 
 const cards = [
   {
     key: 1,
+    src: cardImage10,
+    title: 'PawPathway Project',
+    description:
+      'Using Python, React, MySQL, and twitter I created an interactive website that scraped twitter for information on lost dogs. Real people used this site to report lost dogs via twitter, which was then sent to an always on python script that uploaded information to my database. My website pulled from my database to create a real time lost dog database. The python script also retweeted every tweet with a mention of lost dogs. The project has been shut down at the moment.',
+    class: 'projImg',
+  },
+  {
+    key: 2,
     src: cardImage1,
     title: 'React Meetups',
     description:
@@ -35,7 +45,7 @@ const cards = [
     class: 'projImg',
   },
   {
-    key: 2,
+    key: 3,
     src: cardImage2,
     title: 'User Meetups',
     description:
@@ -43,7 +53,7 @@ const cards = [
     class: 'projImg',
   },
   {
-    key: 3,
+    key: 4,
     src: cardImage3,
     title: 'Eccomerce Demo',
     description:
@@ -51,7 +61,7 @@ const cards = [
     class: 'projImg',
   },
   {
-    key: 4,
+    key: 5,
     src: cardImage4,
     title: 'React Auth',
     description:
@@ -59,7 +69,7 @@ const cards = [
     class: 'projImg',
   },
   {
-    key: 5,
+    key: 6,
     src: cardImage5,
     title: 'Food Ordering Site',
     description:
@@ -67,7 +77,7 @@ const cards = [
     class: 'projImg',
   },
   {
-    key: 6,
+    key: 7,
     src: cardImage6,
     title: 'Bootstrap Demo',
     description:
@@ -75,7 +85,7 @@ const cards = [
     class: 'projImg',
   },
   {
-    key: 7,
+    key: 8,
     src: cardImage7,
     title: 'Vanilla JS Demo',
     description:
@@ -83,7 +93,7 @@ const cards = [
     class: 'projImg',
   },
   {
-    key: 8,
+    key: 9,
     src: cardImage8,
     title: 'PHP Demo',
     description:
@@ -91,7 +101,7 @@ const cards = [
     class: 'projImg',
   },
   {
-    key: 9,
+    key: 10,
     src: cardImage9,
     title: 'More Bootstrap',
     description:
@@ -102,7 +112,7 @@ const cards = [
 
 const ProjectDetails = () => {
   let projectID = useParams().projectID;
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 10; i++) {
     if (projectID == cards[i].key) {
       return (
         <Container className={classes.projectContainer}>
