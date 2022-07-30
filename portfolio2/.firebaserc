@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "jscapstone-9d95d"
+  },
+  "targets": {
+    "jscapstone-9d95d": {
+      "hosting": {
+        "portfolio": [
+          "portfolio-4aee2"
+        ]
+      }
+    }
   }
 }
